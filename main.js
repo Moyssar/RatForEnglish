@@ -17,12 +17,12 @@ let members = [
     img: "./images/ahmed-alsadig.jpg",
   },
   {
-    name: "amjad abdullah",
-    job: "photographer",
+    name: "musaab demba",
+    job: "english coach",
     facebook: "",
-    email: "bamjd171@gmail.com",
-    whatsapp: 129143998,
-    img: "./images/amjad-abdullah.png",
+    email: "msb320120@gmail.com",
+    whatsapp: 991532655,
+    img: "./images/musaab-demba.png",
   },
   {
     name: "marwa warag",
@@ -33,14 +33,6 @@ let members = [
     img: "./images/marwa-warag.png",
   },
   {
-    name: "eman a.elkhawad",
-    job: "public relations",
-    facebook: "",
-    email: "Emooalam2017@gmail.com",
-    whatsapp: 964519665,
-    img: "./images/eman-a.elkhawad.png",
-  },
-  {
     name: "mohamed fathalrahman",
     job: "video editor",
     facebook: "",
@@ -48,6 +40,24 @@ let members = [
     whatsapp: 926303423,
     img: "./images/mohamed-fathelrahman.png",
   },
+  {
+    name: "amjad abdullah",
+    job: "photographer",
+    facebook: "",
+    email: "bamjd171@gmail.com",
+    whatsapp: 129143998,
+    img: "./images/amjad-abdullah.png",
+  },
+
+  {
+    name: "eman a.elkhawad",
+    job: "public relations",
+    facebook: "",
+    email: "Emooalam2017@gmail.com",
+    whatsapp: 964519665,
+    img: "./images/eman-a.elkhawad.png",
+  },
+
   {
     name: "daber saadeldin",
     job: "public relation",
@@ -57,16 +67,14 @@ let members = [
     img: "./images/saber-saadeldin.png",
   },
   {
-    name: "musaab demba",
-    job: "english coach",
+    name: "sejod kamal",
+    job: "public relations",
     facebook: "",
-    email: "msb320120@gmail.com",
-    whatsapp: 991532655,
-    img: "./images/musaab-demba.png",
+    email: "sjood.kamal2002@gmail.com",
+    whatsapp: 0, // <-- number
+    img: "./images/sejod-kamal.png",
   },
 ];
-
-console.log(typeof members);
 
 members.forEach((member) => {
   document.querySelector(".members-cards").innerHTML += `

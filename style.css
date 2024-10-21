@@ -14,6 +14,7 @@
   width: 75%;
   overflow: hidden;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .fa-facebook:hover {
   color: #0000aa;
@@ -22,8 +23,7 @@
   color: #00a6ff;
 }
 .fa-envelope:hover {
-  /* color: var(--main-color); */
-  color: #ff0000;
+  color: var(--main-color);
 }
 .fa-whatsapp:hover {
   color: #00ab8c;
@@ -31,13 +31,32 @@
 body {
   background-color: #fff;
 }
+a {
+  text-decoration: none;
+}
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--main-color);
+  background-color: var(--second-color);
   border-radius: 3px;
 }
+@keyframes scroll {
+  0% {
+    bottom: 10px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 22px;
+
+    opacity: 1;
+  }
+  100% {
+    bottom: 40px;
+    opacity: 0;
+  }
+}
+
 /* ******* globle variables ******** */
 :root {
   --main-color: #016d77;
@@ -54,7 +73,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  filter: drop-shadow(0 10px 10px #00000050);
+  filter: drop-shadow(0 5px 10px #00000099);
   margin-bottom: -50px;
   position: relative;
   width: 100%;
@@ -111,18 +130,13 @@ ul {
 
 /* ******* nav start ******* */
 .nav {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
-  height: 70px;
-  z-index: 5;
 }
 .nav .logo {
   width: 50px;
-  height: 50px;
   border-radius: 50%;
-  z-index: 0;
   position: relative;
 }
 .nav ul {
@@ -130,19 +144,16 @@ ul {
 }
 .nav ul li {
   text-transform: capitalize;
-  height: fit-content;
 }
 .nav ul li a {
   position: relative;
-  text-decoration: none;
   color: #fff;
   font-weight: 500;
-  font-size: 15px;
   padding: 2px;
 }
 .nav ul li a::before {
-  position: absolute;
   content: "";
+  position: absolute;
   width: 0%;
   height: 2px;
   top: 100%;
@@ -179,18 +190,67 @@ ul {
   inset: 0;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
-  z-index: 0;
 }
 .intro-txt {
+  margin-top: 80px;
+}
+.intro-header,
+.intro-p {
   position: relative;
   font-size: 20px;
   color: #fff;
-  width: 75%;
-  margin: 50px auto;
+  width: 70%;
+  margin: 20px auto;
   text-align: center;
-  font-weight: 500;
   text-shadow: 0 0 5px #00000050;
   padding: 10px;
+}
+.intro-header {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 50px;
+}
+.intro .enroll-btn {
+  position: relative;
+  width: 120px;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: capitalize;
+  display: block;
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 8px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--second-color);
+}
+.intro .enroll-btn:hover {
+  background-color: var(--second-color);
+  color: #fff;
+}
+.scroll-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: transparent;
+  width: 30px;
+  height: 55px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  opacity: 0;
+}
+.scroll-icon .animation {
+  width: 5px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 7px;
+  opacity: 0;
+  border-radius: 3px;
 }
 /* ******* intro end ******* */
 
@@ -205,25 +265,22 @@ ul {
 /* ******* team start ******* */
 .team {
   background-color: #eee;
-  padding: 60px 0;
+  padding: 50px 0;
 }
 .team .container > p {
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   padding: 20px;
+  margin-bottom: 20px;
   color: var(--second-color);
   font-size: 20px;
 }
 .members-cards {
   display: grid;
-  justify-content: center;
-  align-items: center;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 .member-card {
-  /* flex: 0.25; */
-  /* margin: 0 10px 15px; */
   background-color: #fff;
   border-radius: 10px;
   height: 360px;
@@ -242,8 +299,8 @@ ul {
   padding-top: 7px;
 }
 .card-header p {
-  color: #ffffff90;
-  font-size: 14px;
+  color: #ffffff99;
+  font-size: 15px;
 }
 .card-img {
   margin-top: 25px;
@@ -256,7 +313,6 @@ ul {
 .card-content {
   margin-top: 5px;
   width: 100%;
-  /* border-top: 1px solid var(--main-color-trans); */
   padding: 10px;
 }
 .card-content ul {
@@ -271,23 +327,53 @@ ul {
 }
 /* ******* team end ******* */
 
-/* ******* start ******* */
-/* ******* end ******* */
-
-/* ******* start ******* */
-/* ******* end ******* */
-
-/* ******* start ******* */
-/* ******* end ******* */
-
-/* ******* start ******* */
-/* ******* end ******* */
+/* ******* QRs start ******* */
+.qrs .sub-title {
+  margin: 10px auto 50px;
+  color: #000;
+  font-size: 30px;
+}
+.qrs > .sub-title::before {
+  display: none;
+}
+.qrs .sub-title i {
+  color: var(--second-color);
+}
+.qrs .sub-section {
+  display: flex;
+  flex-direction: end;
+  margin: 0 auto;
+  width: fit-content;
+}
+.qrs .qr:first-of-type {
+  margin-right: 20px;
+}
+.qrs .qr {
+  width: 180px;
+  text-align: center;
+}
+.qrs .qr:first-of-type a,
+.qrs .qr .fa-facebook {
+  color: #0000aa;
+}
+.qrs .qr a {
+  text-transform: capitalize;
+  font-size: 20px;
+  text-align: center;
+  color: var(--main-color);
+  font-weight: 600;
+  padding: 0;
+  /* margin: 50px 0 -20px 20px; */
+}
+.qrs .qr img {
+  width: 100%;
+}
+/* ******* QRs end ******* */
 
 /* ******* footer start ******* */
 .footer {
-  /* height: 40px; */
   background-color: var(--second-color);
-  font-size: 18\6px;
+  font-size: 18px;
   color: #fff;
   text-align: center;
   text-transform: capitalize;
@@ -301,7 +387,6 @@ ul {
 /* ******* footer end ******* */
 
 /* ******* reponsive design end ******* */
-
 /* ******* tablets design ******* */
 @media (max-width: 990px) {
   .container {
@@ -311,6 +396,7 @@ ul {
     margin-top: 25px;
   }
 }
+
 /* ******* mobiles design ******* */
 @media (max-width: 480px) {
   /*  global veriables  */
@@ -323,7 +409,6 @@ ul {
     width: fit-content;
     margin: 0 auto 20px;
   }
-
   .section-title:before {
     left: -35px;
   }
@@ -339,6 +424,57 @@ ul {
   .intro::before {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+  }
+  .intro-header,
+  .intro-p {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    text-shadow: 0 0 5px #00000050;
+    padding: 10px;
+  }
+  .intro-header {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 40px;
+    width: 100%;
+  }
+  .intro .enroll-btn {
+    width: 150px;
+    margin: 150px auto 0;
+  }
+  .scroll-icon {
+    opacity: 1;
+  }
+  .scroll-icon .animation {
+    opacity: 1;
+    animation: scroll 2s linear infinite;
+  }
+  .qrs .sub-title {
+    margin: 10px auto 50px;
+    color: #000;
+    font-size: 18px;
+  }
+  .qrs > .sub-title::before {
+    display: none;
+  }
+  .qrs .sub-title i {
+    color: var(--second-color);
+  }
+  .qrs .sub-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+  }
+  .qrs .qr {
+    text-align: center;
+  }
+  .footer {
+    font-size: 16px;
+    padding: 5px;
   }
 }
 
