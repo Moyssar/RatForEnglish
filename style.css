@@ -231,7 +231,7 @@ ul {
 }
 .scroll-icon {
   position: absolute;
-  bottom: 20px;
+  bottom: 80px;
   left: 50%;
   transform: translate(-50%);
   background-color: transparent;
