@@ -315,6 +315,9 @@ ul {
 /* ******* team end ******* */
 
 /* ******* timeline start ******* */
+.timeline .description {
+  text-transform: capitalize;
+}
 .timeline-content {
   position: relative;
 }
@@ -559,11 +562,21 @@ ul {
     opacity: 1;
     animation: scroll 2s linear infinite;
   }
-
   .members-cards {
     padding: 0 50px;
   }
-
+  .timeline .left,
+  .timeline .right {
+    float: none;
+    width: 100%;
+  }
+  .timeline .left::before,
+  .timeline .right::before {
+    display: none;
+  }
+  .timeline-content .year {
+    margin-top: 30px;
+  }
   .qrs {
     padding-bottom: 0;
   }
