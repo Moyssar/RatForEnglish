@@ -1,7 +1,9 @@
+// build the team-members secrion
 let members = [
   {
+    id: 1,
     name: "mohamed a.alwahab",
-    job: "english coach",
+    job: "founder",
     facebook:
       "https://www.facebook.com/share/v6p84Bk1a6TB5L6H/?mibextid=LQQJ4d",
     email: "ahmedrat182@gmail.com",
@@ -9,6 +11,7 @@ let members = [
     img: "./images/mr-rat.png",
   },
   {
+    id: 2,
     name: "ahmed alsadig",
     job: "english coach",
     facebook: "",
@@ -17,6 +20,7 @@ let members = [
     img: "./images/ahmed-alsadig.jpg",
   },
   {
+    id: 3,
     name: "musaab demba",
     job: "english coach",
     facebook: "",
@@ -25,6 +29,7 @@ let members = [
     img: "./images/musaab-demba.png",
   },
   {
+    id: 4,
     name: "marwa warag",
     job: "enlish coach",
     facebook: "",
@@ -33,6 +38,7 @@ let members = [
     img: "./images/marwa-warag.png",
   },
   {
+    id: 5,
     name: "mohamed fathalrahman",
     job: "video editor",
     facebook: "",
@@ -41,6 +47,7 @@ let members = [
     img: "./images/mohamed-fathelrahman.png",
   },
   {
+    id: 6,
     name: "amjad abdullah",
     job: "photographer",
     facebook: "",
@@ -50,6 +57,7 @@ let members = [
   },
 
   {
+    id: 7,
     name: "eman a.elkhawad",
     job: "public relations",
     facebook: "",
@@ -59,6 +67,7 @@ let members = [
   },
 
   {
+    id: 8,
     name: "daber saadeldin",
     job: "public relation",
     facebook: "",
@@ -67,6 +76,7 @@ let members = [
     img: "./images/saber-saadeldin.png",
   },
   {
+    id: 9,
     name: "sejod kamal",
     job: "public relations",
     facebook: "",
@@ -78,7 +88,7 @@ let members = [
 
 members.forEach((member) => {
   document.querySelector(".members-cards").innerHTML += `
-  <div class="member-card">
+  <div class="member-card" >
     <div class="card-header">
       <h3>${member.name}</h3>
       <p>${member.job}</p>

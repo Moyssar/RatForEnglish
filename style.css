@@ -16,6 +16,9 @@
   margin: 0 auto;
   padding: 0 15px;
 }
+.clear-fix {
+  clear: both;
+}
 .fa-facebook:hover {
   color: #0000aa;
 }
@@ -68,6 +71,9 @@ a {
   --text-size: 16px;
   --text-width: 400;
 }
+section:not(:first-of-type) {
+  padding: 50px 0;
+}
 .section-title {
   font-size: 80px;
   text-align: center;
@@ -95,6 +101,14 @@ a {
 }
 .section-title:after {
   right: -30px;
+}
+.description {
+  text-align: center;
+  font-weight: 500;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: var(--second-color);
+  font-size: 20px;
 }
 .sub-section {
   margin-bottom: 20px;
@@ -210,25 +224,6 @@ ul {
   font-weight: 600;
   font-size: 50px;
 }
-.intro .enroll-btn {
-  position: relative;
-  width: 120px;
-  background-color: #fff;
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: capitalize;
-  display: block;
-  padding: 10px 20px;
-  outline: none;
-  border-radius: 8px;
-  margin: 0 auto;
-  text-align: center;
-  color: var(--second-color);
-}
-.intro .enroll-btn:hover {
-  background-color: var(--second-color);
-  color: #fff;
-}
 .scroll-icon {
   position: absolute;
   bottom: 80px;
@@ -265,16 +260,8 @@ ul {
 /* ******* team start ******* */
 .team {
   background-color: #eee;
-  padding: 50px 0;
 }
-.team .container > p {
-  text-align: center;
-  font-weight: 500;
-  padding: 20px;
-  margin-bottom: 20px;
-  color: var(--second-color);
-  font-size: 20px;
-}
+
 .members-cards {
   display: grid;
   grid-gap: 20px;
@@ -327,13 +314,116 @@ ul {
 }
 /* ******* team end ******* */
 
+/* ******* timeline start ******* */
+.timeline-content {
+  position: relative;
+}
+.timeline-content .year {
+  color: #fff;
+  background-color: var(--second-color);
+  position: relative;
+  width: fit-content;
+  margin: 10px auto;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  outline: 5px solid #fff;
+}
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: var(--main-color);
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline-content .event {
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.timeline .left,
+.timeline .right {
+  width: calc(50% - 30px);
+  position: relative;
+  margin-bottom: 20px;
+}
+.left .event::before,
+.right .event::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-color: transparent transparent transparent #eee;
+  top: 30px;
+  right: -30px;
+  transform: translateX(-50%);
+}
+.right .event::before {
+  border-color: transparent #eee transparent transparent;
+  left: -10px;
+}
+.left {
+  float: left;
+  position: relative;
+}
+.right {
+  float: right;
+}
+.left::before,
+.right::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 5px solid var(--second-color);
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 30px;
+}
+.left::before {
+  right: -40px;
+}
+.right::before {
+  left: -40px;
+}
+.event .event-heading {
+  text-transform: capitalize;
+  color: var(--second-color);
+  font-weight: 600;
+}
+.event .event-p {
+  line-height: normal;
+  color: #666;
+  width: 100%;
+  padding: 10px 0;
+}
+.event .coop {
+  font-size: 14px;
+}
+.event .coop span {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: var(--main-color);
+}
+/* ******* timeline end ******* */
+
 /* ******* QRs start ******* */
+.qrs {
+  background-color: #eee;
+}
 .qrs .sub-title {
   margin: 10px auto 50px;
   color: #000;
   font-size: 30px;
 }
-.qrs > .sub-title::before {
+.qrs .sub-title::before {
   display: none;
 }
 .qrs .sub-title i {
@@ -387,6 +477,26 @@ ul {
 /* ******* footer end ******* */
 
 /* ******* reponsive design end ******* */
+
+/* ******* standerd labtops design ******* */
+@media (max-width: 1366px) {
+  .container {
+    width: 75%;
+    padding: 0 15px;
+  }
+  .intro-txt {
+    margin-top: 40px;
+  }
+  .intro-p {
+    font-size: 18px;
+    width: 75%;
+  }
+  .intro-header {
+    margin-bottom: -20px;
+    font-size: 40px;
+  }
+}
+
 /* ******* tablets design ******* */
 @media (max-width: 990px) {
   .container {
@@ -442,10 +552,6 @@ ul {
     font-size: 40px;
     width: 100%;
   }
-  .intro .enroll-btn {
-    width: 150px;
-    margin: 100px auto 0;
-  }
   .scroll-icon {
     opacity: 1;
   }
@@ -453,13 +559,18 @@ ul {
     opacity: 1;
     animation: scroll 2s linear infinite;
   }
+
+  .members-cards {
+    padding: 0 50px;
+  }
+
+  .qrs {
+    padding-bottom: 0;
+  }
   .qrs .sub-title {
-    margin: 10px auto 50px;
+    margin: 20px auto 80px;
     color: #000;
     font-size: 18px;
-  }
-  .qrs > .sub-title::before {
-    display: none;
   }
   .qrs .sub-title i {
     color: var(--second-color);
