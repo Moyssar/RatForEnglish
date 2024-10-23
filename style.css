@@ -11,7 +11,7 @@
   transition: all 250ms ease-in-out;
 }
 .container {
-  width: 75%;
+  max-width: 1200px;
   overflow: hidden;
   margin: 0 auto;
   padding: 0 15px;
@@ -314,6 +314,50 @@ ul {
 }
 /* ******* team end ******* */
 
+/* ******* features start ******* */
+.features {
+  background-color: var(--second-color);
+}
+.features .section-title {
+  filter: drop-shadow(0 0 0);
+  font-size: 65px;
+  margin-bottom: 50px;
+}
+.features .section-title::before,
+.features .section-title::after {
+  background-color: #fff;
+}
+.features .feat-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 45px;
+  text-align: center;
+}
+.features .feature {
+  width: 100%;
+  color: #fff;
+  padding: 15px;
+}
+.features .feature:nth-of-type(2) {
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.features .feature i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.features .feature h3 {
+  text-transform: capitalize;
+}
+.features .feature p {
+  color: #eee;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+/* ******* features end ******* */
+
 /* ******* timeline start ******* */
 .timeline .description {
   text-transform: capitalize;
@@ -433,16 +477,11 @@ ul {
   color: var(--second-color);
 }
 .qrs .sub-section {
-  display: flex;
-  flex-direction: end;
-  margin: 0 auto;
-  width: fit-content;
-}
-.qrs .qr:first-of-type {
-  margin-right: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 .qrs .qr {
-  width: 180px;
   text-align: center;
 }
 .qrs .qr:first-of-type a,
@@ -519,7 +558,6 @@ ul {
   }
   .section-title {
     font-size: 50px;
-    width: fit-content;
     margin: 0 auto 20px;
   }
   .section-title:before {
@@ -564,6 +602,20 @@ ul {
   }
   .members-cards {
     padding: 0 50px;
+  }
+  .features .feature:nth-of-type(2) {
+    border-right: none;
+    border-left: none;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+  }
+  .features .section-title {
+    font-size: 50px;
+    margin: 0 auto 20px;
+  }
+  .features .container {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
   }
   .timeline .left,
   .timeline .right {
