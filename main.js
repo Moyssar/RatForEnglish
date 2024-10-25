@@ -143,13 +143,13 @@ members.forEach((member) => {
 // ******* build the timeline section. *******
 // create the events object.
 let events = [
-  // {
-  //   id: 1,
-  //   float: "left",
-  //   month: "october",
-  //   body: "we made a competition under thetitle best public presentation we We cooperated with Charcoal's Burger and Aldaly-Ice-cream it was great event.",
-  //   coop: "center garden.",
-  // },
+  {
+    id: 1,
+    float: "left",
+    month: "october",
+    body: "we made a competition under thetitle best public presentation we We cooperated with Charcoal's Burger and Aldaly-Ice-cream it was great event.",
+    coop: "center garden.",
+  },
   {
     id: 2,
     float: "left",
