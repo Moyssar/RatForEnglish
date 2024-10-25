@@ -78,7 +78,7 @@ section:not(:first-of-type) {
   margin: 0 auto;
 }
 .section-title.dark-title {
-  color: #eee;
+  color: #e0e0e0;
 }
 .section-title:before,
 .section-title:after {
@@ -250,18 +250,6 @@ ul {
   height: 360px;
   overflow: hidden;
 }
-.card-header {
-  height: 66px;
-  background-color: var(--main-color);
-  border-radius: 10px;
-  text-align: center;
-  text-transform: capitalize;
-  color: #fff;
-  padding: 7px 0;
-}
-.card-header p {
-  color: #ffffff99;
-}
 .card-img {
   margin-top: 25px;
   height: 60%;
@@ -270,10 +258,23 @@ ul {
 .card-img img {
   height: 100%;
 }
+.card-header {
+  height: 66px;
+  background-color: var(--main-color);
+  /* border-radius: 10px; */
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 7px 0;
+}
+.card-header p {
+  color: #ffffff99;
+}
 .card-content {
   margin-top: 3px;
   width: 100%;
   padding: 10px;
+  background-color: #fff;
 }
 .card-content ul {
   display: flex;

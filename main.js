@@ -1,9 +1,10 @@
-// build the team-members secrion
+// ******* build the team-members-secrion. *******
+// create the members object.
 let members = [
   {
     id: 1,
     name: "mohamed a.alwahab",
-    job: "founder",
+    job: "founder - english coach",
     facebook:
       "https://www.facebook.com/share/v6p84Bk1a6TB5L6H/?mibextid=LQQJ4d",
     email: "ahmedrat182@gmail.com",
@@ -12,6 +13,15 @@ let members = [
   },
   {
     id: 2,
+    name: "ahmed alsadig",
+    job: "co-founder - english coach",
+    facebook: "https://www.facebook.com/a7medlorder?mibextid=ZbWKwL",
+    email: "ahmedalsadig@gmail.com",
+    whatsapp: 995387674,
+    img: "./images/ahmed-alsadig.jpg",
+  },
+  {
+    id: 3,
     name: "hanaa aboud",
     job: "supervisor",
     facebook:
@@ -19,15 +29,6 @@ let members = [
     email: "hanaaboud32@gmail.com",
     whatsapp: 126520671, // <--
     img: "./images/hanaa-aboud.png",
-  },
-  {
-    id: 3,
-    name: "ahmed alsadig",
-    job: "english coach",
-    facebook: "https://www.facebook.com/a7medlorder?mibextid=ZbWKwL",
-    email: "ahmedalsadig@gmail.com",
-    whatsapp: 995387674,
-    img: "./images/ahmed-alsadig.jpg",
   },
   {
     id: 4,
@@ -88,7 +89,7 @@ let members = [
   },
   {
     id: 10,
-    name: "daber saadeldin",
+    name: "saber saadeldin",
     job: "public relation",
     facebook: "https://www.facebook.com/saber.saadeldin.9?mibextid=ZbWKwL",
     email: "saber.saadeldin2005@gmail.com",
@@ -106,16 +107,16 @@ let members = [
     img: "./images/sejod-kamal.png",
   },
 ];
-
+// build the functionality & push the members blocks to the DOM.
 members.forEach((member) => {
   document.querySelector(".members-cards").innerHTML += `
   <div class="member-card" >
+  <div class="card-img"> 
+      <img src="${member.img}" />
+    </div>
     <div class="card-header">
       <h3>${member.name}</h3>
       <p>${member.job}</p>
-    </div>
-    <div class="card-img"> 
-      <img src="${member.img}" />
     </div>
     <div class="card-content">
       <ul>
@@ -138,4 +139,69 @@ members.forEach((member) => {
     </div>
   </div>
   `;
+});
+// ******* build the timeline section. *******
+// create the events object.
+let events = [
+  {
+    id: 1,
+    float: "left",
+    month: "october",
+    body: "we made a competition under thetitle best public presentation we We cooperated with Charcoal's Burger and Aldaly-Ice-cream it was great event.",
+    coop: `
+    <p class="coop">
+          Cooperated by: <span>center garden</span>
+        </p>`,
+  },
+  {
+    id: 2,
+    float: "left",
+    month: "october",
+    body: "we made a listening competition it was somehow tough  and advance to participate in but the participants did a wonderful job .",
+    coop: "British Educational Center.",
+  },
+  {
+    id: 3,
+    float: "left",
+    month: "october",
+    body: "we made a a reading competition was held. It was an enthusiastic and innovative experience and was broadcast on <b class='colord-b'>Sudan</b> TV.",
+    coop: "Shendi Youth Center.",
+  },
+  {
+    id: 4,
+    float: "right",
+    month: "september",
+    body: "we made an English club under the title personality. it was new and unique experience with the medical students",
+    coop: "Shendi university.",
+  },
+  {
+    id: 5,
+    float: "right",
+    month: "september",
+    body: "we have done a marvelous competition which was reading competition.",
+    coop: "Bakri store</span> and <span>Hala Sweet.",
+  },
+  {
+    id: 6,
+    float: "left",
+    month: "august",
+    body: "we have done a debate between Coach Abdul Jalil and Coach Mabrouk, and both of them gave an amazing performance, and the vote went to Coach Mabrouk. this debate was online on our channel on Telegram.",
+    coop: "coach Abdul Jalil</span> and <span>coach Mabrouk.",
+  },
+];
+// build the events functionality & puth the events blocks to the DOM
+events.forEach((event) => {
+  document.querySelector(".timeline-content").innerHTML += `
+    <div class="${event.float}">
+      <div class="event">
+        <h3 class="event-heading">${event.month}</h3>
+        <p class="event-p">
+        ${event.body}
+        </p>
+        <p class="coop">
+          Cooperated by: <span>${event.coop}</span>
+        </p>
+      </div>
+    </div>
+    <div class="clear-fix"></div>`;
 });
