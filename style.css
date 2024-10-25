@@ -322,6 +322,31 @@ ul {
   padding: 10px;
 }
 /* ******* features end ******* */
+/* ******* galary start ******* */
+.gallery {
+  background-color: #eee;
+}
+.gallery .sub-title {
+  margin: 10px auto;
+  font-weight: 500;
+}
+.gallery .sub-title::before {
+  display: none;
+}
+.gallery .imgs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.gallery .img-container.img-full {
+  padding: 0 20px;
+}
+.gallery .img-container img {
+  width: 100%;
+  border-radius: 7px;
+}
+/* ******* galary end ******* */
 /* ******* timeline start ******* */
 .timeline .description {
   text-transform: capitalize;
@@ -515,6 +540,11 @@ ul {
     gap: 0 10px;
   }
   /* ******* features end ******* */
+  /* ******* gallery start ******* */
+  .gallery .imgs-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  /* ******* gallery end ******* */
   /* ******* QRs end ******* */
   .qrs .sub-title {
     font-size: 20px;
@@ -593,11 +623,9 @@ ul {
   section:not(:first-of-type) {
     padding: 40px 0;
   }
-  .section-title:before {
-    left: -35px;
-  }
+  .section-title:before,
   .section-title:after {
-    right: -35px;
+    display: none;
   }
   /* ******* global ******* */
   /* ******* intro start ******* */
