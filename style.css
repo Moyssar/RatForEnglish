@@ -78,7 +78,7 @@ section:not(:first-of-type) {
   margin: 0 auto;
 }
 .section-title.dark-title {
-  color: #e0e0e0;
+  color: #e7e7e7;
 }
 .section-title:before,
 .section-title:after {
