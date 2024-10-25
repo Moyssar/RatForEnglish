@@ -148,7 +148,7 @@ let events = [
     float: "left",
     month: "october",
     body: "we made a competition under thetitle best public presentation we We cooperated with Charcoal's Burger and Aldaly-Ice-cream it was great event.",
-    coop: "the center garden.",
+    coop: "center garden.",
   },
   {
     id: 2,
